@@ -27,33 +27,33 @@ RUN apt-get -y update \
  && rm -rf /var/lib/apt/lists/*
 
 # Install Node.js and npm
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
-    && apt-get install -y nodejs
+#RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
+#    && apt-get install -y nodejs
 
 # Install TurboVNC (https://github.com/TurboVNC/turbovnc)
-ARG TURBOVNC_VERSION=2.2.6
-RUN wget -q "https://sourceforge.net/projects/turbovnc/files/${TURBOVNC_VERSION}/turbovnc_${TURBOVNC_VERSION}_amd64.deb/download" -O turbovnc.deb \
- && apt-get update -qq --yes > /dev/null \
- && apt-get install -y ./turbovnc.deb > /dev/null \
+#ARG TURBOVNC_VERSION=2.2.6
+#RUN wget -q "https://sourceforge.net/projects/turbovnc/files/${TURBOVNC_VERSION}/turbovnc_${TURBOVNC_VERSION}_amd64.deb/download" -O turbovnc.deb \
+# && apt-get update -qq --yes > /dev/null \
+# && apt-get install -y ./turbovnc.deb > /dev/null \
  # remove light-locker to prevent screen lock
- && apt-get remove -y light-locker > /dev/null \
- && rm ./turbovnc.deb \
- && ln -s /opt/TurboVNC/bin/* /usr/local/bin/ \
- && rm -rf /var/lib/apt/lists/*
+# && apt-get remove -y light-locker > /dev/null \
+# && rm ./turbovnc.deb \
+# && ln -s /opt/TurboVNC/bin/* /usr/local/bin/ \
+# && rm -rf /var/lib/apt/lists/*
 
-RUN mamba install -n ${CONDA_ENV} -y websockify
+#RUN mamba install -n ${CONDA_ENV} -y websockify
 
 # Install jupyter-remote-desktop-proxy with compatible npm version
-RUN export PATH=${NB_PYTHON_PREFIX}/bin:${PATH} \
- && npm install -g npm@7.24.0 \
- && pip install --no-cache-dir \
-        https://github.com/jupyterhub/jupyter-remote-desktop-proxy/archive/main.zip
+#RUN export PATH=${NB_PYTHON_PREFIX}/bin:${PATH} \
+# && npm install -g npm@7.24.0 \
+# && pip install --no-cache-dir \
+#        https://github.com/jupyterhub/jupyter-remote-desktop-proxy/archive/main.zip
 
 # Install jupyterlab_vim extension
-RUN pip install jupyterlab_vim
+#RUN pip install jupyterlab_vim
 
 # TO download the folder/files:
-RUN pip install jupyter-tree-download 
+#RUN pip install jupyter-tree-download 
 
 # Install Google Cloud SDK (gcloud, gsutil)
 #RUN apt-get update && \

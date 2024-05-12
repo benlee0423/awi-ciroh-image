@@ -98,7 +98,7 @@ RUN mkdir /usr/local/sundials
 RUN mkdir builddir
 WORKDIR /code/sundials/builddir
 RUN cmake ../../sundials-7.0.0 -DBUILD_FORTRAN_MODULE_INTERFACE=ON \
-        -DCMAKE_C_COMPILER=/usr/bin/gcc
+        -DCMAKE_C_COMPILER=/usr/bin/gcc \
         -DCMAKE_Fortran_COMPILER=gfortran \
         -DCMAKE_INSTALL_PREFIX=/usr/local/sundials \
         -DEXAMPLES_INSTALL_PATH=/code/sundials/instdir/examples

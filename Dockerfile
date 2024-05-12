@@ -92,4 +92,6 @@ RUN sed -i 's/\"default\": true/\"default\": false/g' /srv/conda/envs/notebook/s
 # Install dataretrieval package
 RUN pip install dataretrieval
 
+RUN mamba update -n ${CONDA_ENV} -f environment.yml
+
 USER ${NB_USER}

@@ -91,5 +91,7 @@ RUN sed -i 's/\"default\": true/\"default\": false/g' /srv/conda/envs/notebook/s
 
 # Install dataretrieval package
 RUN pip install dataretrieval
+RUN pip install earthengine-api
+RUN pip install plotly==5.22.0
 
 USER ${NB_USER}

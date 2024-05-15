@@ -1,0 +1,2 @@
+pip install --user ipykernel
+python -m ipykernel install --user --name=devcon_xgboost

@@ -74,8 +74,6 @@ dependencies:
   - idna=3.7=pyhd8ed1ab_0
   - importlib-metadata=7.1.0=pyha770c72_0
   - importlib_metadata=7.1.0=hd8ed1ab_0
-  - ipykernel=6.29.3=pyhd33586a_0
-  - ipython=8.24.0=pyh707e725_0
   - jedi=0.19.1=pyhd8ed1ab_0
   - jupyter_client=8.6.1=pyhd8ed1ab_0
   - jupyter_core=5.7.2=py311h38be061_0

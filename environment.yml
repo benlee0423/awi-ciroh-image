@@ -1,17 +1,32 @@
-name: deep_bucket_env
+name: neuralhydrology_cpu
 channels:
- - conda-forge
- - defaults
+  - pytorch
+  - defaults
+  - conda-forge
 dependencies:
- - python=3.9*
- - jupyterlab
-# - jupyter_contrib_nbextensions
- - notebook
- - numpy
- - pandas
- - scikit-learn
- - pytorch-lightning
- - torchinfo
- - matplotlib
- - ipykernel
- - ipywidgets
+  - bokeh
+  - cpuonly
+  - h5py
+  - hdf5
+  - jupyter
+  - matplotlib
+  - netcdf4
+  - numba
+  - pandas
+  - pip
+  - pytest
+  - pytest-cov
+  - python=3.10
+  - pytorch
+  - ruamel.yaml
+  - scipy
+  - sphinx
+  - tqdm
+  - xarray
+  - yapf
+  - pip:
+    - tensorboard
+    - sphinx-rtd-theme
+    - nbsphinx
+    - nbsphinx-link
+    - parso==0.8.0

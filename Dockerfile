@@ -91,5 +91,6 @@ RUN sed -i 's/\"default\": true/\"default\": false/g' /srv/conda/envs/notebook/s
 
 # Install dataretrieval package
 RUN pip install dataretrieval
+RUN pip install torch
 
 USER ${NB_USER}
